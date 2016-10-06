@@ -16,6 +16,7 @@ let getUrl = (part, postalCode) => {
 }
 
 const app = express()
+app.set('port', (process.env.PORT || 5000))
 
 const View = ({ models }) => {
 	return <div>
@@ -38,9 +39,10 @@ const View = ({ models }) => {
 
 export default () => {
 
-	app.listen(80, () => {
+	app.listen(app.get('port'), () => {
 		console.log('The app is listening on port 80!')
 	})
+
 
 	app.get('/', (req, res) => {
 
