@@ -4,9 +4,12 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 const parts = [
-	{ id: 'MN4P2VC/A', name: 'iPhone 7 Plus 128Gb Silver' },
+	{ id: 'MN4V2VC/A', name: 'iPhone 7 Plus 128Gb Jet Black' },
 	{ id: 'MN4M2VC/A', name: 'iPhone 7 Plus 128Gb Black' },
-	{ id: 'MN922VC/A', name: 'iPhone 7 128Gb Black' }
+	{ id: 'MN4P2VC/A', name: 'iPhone 7 Plus 128Gb Silver' },
+	{ id: 'MN962VC/A', name: 'iPhone 7 128Gb Jet Black' },
+	{ id: 'MN922VC/A', name: 'iPhone 7 128Gb Black' },
+	{ id: 'MN932VC/A', name: 'iPhone 7 128Gb Silver' }
 ]
 
 const POSTAL_CODE = 'M4Y 1T5';
@@ -16,7 +19,7 @@ let getUrl = (part, postalCode) => {
 }
 
 const app = express()
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 3000))
 
 const View = ({ models }) => {
 	return <div>
@@ -40,7 +43,7 @@ const View = ({ models }) => {
 export default () => {
 
 	app.listen(app.get('port'), () => {
-		console.log('The app is listening on port 80!')
+		console.log('The app is listening on port ' + app.get('port') + '!')
 	})
 
 
