@@ -38,8 +38,8 @@ const View = ({ models }) => {
 
 export default () => {
 
-	app.listen(3000, () => {
-		console.log('The app is listening on port 3000!')
+	app.listen(80, () => {
+		console.log('The app is listening on port 80!')
 	})
 
 	app.get('/', (req, res) => {
