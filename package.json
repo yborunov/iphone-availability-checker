@@ -1,6 +1,9 @@
 {
   "name": "iphone-availability",
   "version": "1.0.0",
+  "engines": {
+    "node": "5.9.1"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
